@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>IntraNetwork - Groupomania Intranet</title>
+    <meta name="description" content="IntraNetwork - Groupomania Intranet" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="../css/images/favicon.JPG"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/media.css" />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header>
+        <div class="header">
+          <a href="accueil.html" class="accueil"
+            ><img src="../css/images/logo3.png" alt="Logo Groupomania"
+          /></a>
+          
+          <button class="logout" type="button" name="logout">
+            Se déconnecter
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div id="page-network">
+          <h1>IntraNetwork Groupomania</h1>
+          <div id="ajouter-post">
+            <button
+              id="ajout-post"
+              onclick="window.location.href = './form-network.html';"
+            >
+              Ajouter un nouveau message
+            </button>
+          </div>
+          <div id="liste-message"></div>
+        </div>
+      </main>
+      
+    </div>
+    <script src="../js/authFront.js"></script>
+    <script src="../js/getMessage.js"></script>
+    <script>
+      getAllMessages();
+    </script>
+    <script src="../js/logout.js"></script>
+  </body>
+</html>
