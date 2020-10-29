@@ -48,7 +48,7 @@ function getMessages(message) {
     networkPostMessage.setAttribute("class", "zone_texte");
     networkPostTitle.setAttribute("class", "zone_title");
     networkPostIllustration.setAttribute("class", "zone_image");
-    btnCommenter.setAttribute("class", "btn-commenter");
+    btnCommenter.setAttribute("class", "btn-commenter btn btn-secondary");
 
     if (message.Message_image_url != undefined) {
       networkPostPhoto.setAttribute("class", "image-network");
@@ -126,7 +126,7 @@ function getMessage(oneMessage) {
   let actionButtonMessage = document.getElementById("action-button-message");
   let btnRetourMessage = document.createElement("button");
 
-  btnRetourMessage.setAttribute("class", "btn-retour-message");
+  btnRetourMessage.setAttribute("class", "btn-retour-message btn btn-secondary");
   btnRetourMessage.setAttribute("type", "button");
   btnRetourMessage.setAttribute("name", "retour-message");
   btnRetourMessage.setAttribute(
@@ -168,15 +168,14 @@ function getMessage(oneMessage) {
     let modifyMessage = document.createElement("button");
     btnModifyMessage.setAttribute("id", "btn-modify-message");
     modifyMessage.setAttribute("type", "button");
-    btnModifyMessage.setAttribute(
-      "href",
-      "form-intranetwork-update.html?id=" + oneMessage.id
-    );
+	  modifyMessage.setAttribute("class", "btn btn-secondary");
+    btnModifyMessage.setAttribute("href","form-intranetwork-update.html?id=" + oneMessage.id);
     btnModifyMessage.appendChild(modifyMessage);
     let btnDeleteMessage = document.createElement("button");
     btnDeleteMessage.setAttribute("id", "btn-delete-message");
     btnDeleteMessage.setAttribute("type", "button");
     btnDeleteMessage.setAttribute("name", "btn-delete-message");
+	  btnDeleteMessage.setAttribute("class", "btn btn-danger");
     actionButtonMessage.appendChild(btnModifyMessage);
     actionButtonMessage.appendChild(btnDeleteMessage);
     modifyMessage.textContent = "Modifier";

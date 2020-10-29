@@ -28,6 +28,7 @@ function profilInformation() {
       let profilButton = document.getElementById("profil-button");
       let btnAdmin = document.createElement("button");
       btnAdmin.setAttribute("id", "menu-admin");
+		btnAdmin.setAttribute("class", "btn btn-secondary");
       btnAdmin.setAttribute("type", "button");
       btnAdmin.setAttribute("name", "menu-admin");
       btnAdmin.setAttribute(

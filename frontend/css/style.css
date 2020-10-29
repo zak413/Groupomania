@@ -1,3 +1,13 @@
+.accueil {
+	width: 444px;
+}
+
+button {
+	height: 40px !important;
+	margin: 5px !important;
+}
+
+
 /*GENERAL*/
 
 body {
@@ -23,14 +33,19 @@ button {
 
 /*HEADER*/
 .header {
+	width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  margin-top: 1rem;
+	align-items: center;
+	
+}
+header {
+	margin-bottom: 50px;
 }
 
+.header img {
+	width: 400px;
+}
 .header .header-navigation {
   display: flex;
   flex-direction: row;
@@ -39,8 +54,6 @@ button {
   padding-left: 0;
 }
 .header .header-navigation .nav-item {
-  margin-left: 1rem;
-  margin-right: 1rem;
   font-size: 1.2em;
 }
 
@@ -62,7 +75,6 @@ button {
 
 .form-user h1 {
   text-align: center;
-  background-color: #d1d1d1;
 }
 #form_login,
 #form_signup {
@@ -72,12 +84,13 @@ button {
   align-items: center;
   width: auto;
   box-shadow: 0 0 1em black;
-  border: 2px solid darkblue;
+	border-radius: 20px;
   margin-bottom: 3rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(224, 227, 230, 0.9);
+  background-color: #6295F7;
   width: 65%;
+	padding-bottom: 10px;
 }
 
 #form_login button,
@@ -100,12 +113,17 @@ input {
 
 .profil {
   width: 90%;
-  border: 2px solid #160453;
   border-radius: 10px;
-  background-color: #d1d1d1;
+  background-color: #6295F7 !important;
   text-align: center;
   margin: auto;
   font-size: 1.2em;
+	box-shadow: 0 0 1em black;
+	border: 1px solid black;
+	color: black;
+}
+.bolder {
+	font-weight: bold;
 }
 .profil p {
   margin-right: 0.5em;
@@ -116,17 +134,6 @@ input {
   margin-bottom: 1em;
 }
 
-.voir-profil,
-.masquer-profil {
-  border: darkblue 1px solid;
-  background-color: darkgray;
-  border-radius: 2px;
-  box-shadow: 0 0 1em #e2e2e2;
-  color: white;
-  margin-left: 2em;
-  margin-bottom: 2em;
-}
-
 #profil-name,
 #profil-firstname,
 #profil-mail,
@@ -135,8 +142,13 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: center;
+	font-size: 20px;
 }
-
+#monPro {
+	display: flex;
+	justify-content: center;
+	color: black;
+}
 .menu-navigation {
   display: flex;
   flex-direction: row;
@@ -145,8 +157,8 @@ input {
 }
 .nav-menu {
   box-shadow: 0 0 1em #e2e2e2;
-  width: 475px;
-  height: 411px;
+  width: 520px;
+  height: 260px;
   margin: 1em 1em 1em 1em;
   display: flex;
   flex-direction: column;
@@ -157,11 +169,13 @@ input {
 }
 
 #menu-intranetwork a {
-  background-color: rgba(224, 227, 230, 0.9);
+  color: white;
+	font-weight: bold;
 }
 #menu-intranetwork p {
   visibility: hidden;
-  background-color: rgba(224, 227, 230, 0.9);
+  color: white;
+	font-weight: bold;
   font-size: 1.6rem;
 }
 
@@ -177,7 +191,7 @@ input {
 }
 
 #menu-intranetwork {
-  background-color: 
+  background-image: url(images/ImageDetail_fd3463c4-f15b-4991-9353-627cbc4e0274_Medium.jpg);
   background-position: center;
   font-size: 2em;
 }
@@ -201,15 +215,18 @@ input {
 
 /* PAGE INTRAMARKET - INTRANETWORK*/
 
-#page-market {
-  background-image: url(./images/market-back-min.jpg);
-  background-position: center;
-}
 #page-network {
-  background-image: url();
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  background-color: #FCBC89;
   background-position: center;
   margin-left: 2rem;
   margin-right: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding: 10px;
   box-shadow: 0 0 1em #c7c6ca;
   border-radius: 25px;
 }
@@ -224,7 +241,6 @@ input {
 #update-form-network h1,
 #form-update-market h1 {
   text-align: center;
-  background-color: #d1d1d1;
 }
 #fiche-commentaire h3 {
   margin-top: 5rem;
@@ -274,8 +290,11 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-decoration: none;
+	align-items: center;
+  text-decoration: none !important;
   text-align: center;
+	padding: 5px;
+	color: black;
 }
 
 .image-article {
@@ -351,11 +370,9 @@ input {
 
 .commentaire {
   width: 85%;
-  background-color: white;
+  background-color: #89FC9A;
   border-radius: 5px;
-  margin-top: 0rem;
-  margin-left: 7em;
-  margin-right: auto;
+	margin: auto;
   box-shadow: 0 0 1em black;
   text-align: center;
 }
@@ -389,9 +406,10 @@ input {
   align-items: center;
   width: auto;
   box-shadow: 0 0 1em black;
-  border: 2px solid darkblue;
+	border-radius: 20px;
   margin-bottom: 3rem;
-  background-color: rgba(224, 227, 230, 0.9);
+  background-color: #FCBC89;
+	padding: 20px;
 }
 
 #image-market,
@@ -449,11 +467,9 @@ input:focus:invalid {
 
 #nbre-comment {
   text-align: center;
-  color: darkblue;
-  width: 200px;
+  color: black;
   margin: auto;
   margin-bottom: 2em;
-  background-color: darkgray;
 }
 
 /* LISTE UTILISATEUR */
@@ -464,15 +480,19 @@ input:focus:invalid {
   box-shadow: 0 0 1em #c7c6ca;
   border-radius: 25px;
   text-align: center;
+	background-color: #CFCFCF;
 }
 .user_element {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+	align-items: center;
   text-align: center;
   margin: auto;
   border-top: 1px solid darkgray;
+	color: black;
 }
+
 
 /*FOOTER*/
 .footer {

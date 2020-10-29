@@ -42,11 +42,9 @@ function getMessageToDisplay(updateMessage) {
   let btnRetourUpdate = document.createElement("button");
   btnRetourUpdate.setAttribute("id", "btn-retour-message-update");
   btnRetourUpdate.setAttribute("type", "button");
+	btnRetourUpdate.setAttribute("class", "btn btn-secondary");
   btnRetourUpdate.setAttribute("name", "retour-update-message");
-  btnRetourUpdate.setAttribute(
-    "onclick",
-    "window.location.href='../html/intranetwork.html'"
-  );
+  btnRetourUpdate.setAttribute("onclick","window.location.href='../html/intranetwork.html'");
 
   actionButtonUpdate.appendChild(btnRetourUpdate);
 

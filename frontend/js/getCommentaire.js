@@ -80,6 +80,7 @@ infoSingleCommentaire.appendChild(dateSingleCommentaire);
     btnDeleteCommentaire.setAttribute("id", "btn-delete-commentaire"+commentaire.id);
     btnDeleteCommentaire.setAttribute("type", "button");
     btnDeleteCommentaire.setAttribute("name", "btn-delete-commentaire");
+	  btnDeleteCommentaire.setAttribute("class", "btn btn-danger");
    
     commentaireContenant.appendChild(actionButtonCommentaire);
     actionButtonCommentaire.appendChild(btnDeleteCommentaire);
