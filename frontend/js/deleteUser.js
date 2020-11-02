@@ -1,6 +1,3 @@
-///// SUPPRESSION DU COMPTE /////
-
-
 function deleteUser() {
   fetch(url + "api/profil/" + id, {
     method: "DELETE",
@@ -18,7 +15,6 @@ function deleteUser() {
     });
 }
 
-//button for cancel account
 
 let btnDeleteAccount = document.getElementById("suppression-compte");
 btnDeleteAccount.addEventListener("click", ($event) => {

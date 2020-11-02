@@ -1,12 +1,10 @@
-
-
 function createCommentaire() {
   let idMessage = location.search.substring(4);
 
   
   let firstname = localStorage.getItem("firstname");
   let lastname = localStorage.getItem("lastname");
-let commentaire = document.getElementById("new-commentaire").value;
+  let commentaire = document.getElementById("new-commentaire").value;
 
   const formDataCommentaire = new FormData();
   formDataCommentaire.append("user_id", id);

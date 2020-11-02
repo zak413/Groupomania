@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nouveau message</title>
+    <meta name="description" content="Nouveau message"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <link rel="shortcut icon" type="image/png" href="../css/images/icon.png"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/media.css" />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header>
+        <nav class="navbar">
+			<div class="header">
+          		<a href="pageAccueil.html" class="accueil"><img src="../css/images/icon-left-font-monochrome-white.png" alt="Logo Groupomani"/></a>
+         		<button class="logout btn btn-danger" type="button" name="logout">Se déconnecter</button>
+       	 	</div>		
+       	</nav>
+      </header>
+
+      <main>
+        <div id="page-form-network">
+          <h1>Publiez un message !</h1>
+          <div class="cadre">
+            <form method="post" name="form-network" id="form-network">
+              <div class="form-group">
+                <label for="title-message">Titre du message</label>
+                <input type="text" id="title-message" name="title-message" class="form-control" required autofocus placeholder="Titre du message"/>
+              </div>
+              <div class="form-group">
+                <label for="new-message">Nouveau message</label>
+                <textarea id="new-message" name="new-message" class="form-control" rows="10" cols="50" required placeholder="Rédigez votre message ici..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="imageUrl">Insérer une image</label>
+                <input type="file" accept="image/*" id="imageUrl" name="imageUrl" class="form-control" />
+              </div>
+
+              <button class="btn btn-primary" id="valider-message" type="submit" name="valider-message">valider votre message</button>
+            </form>
+          </div>
+        </div>
+      </main>
+      
+    </div>
+    <script src="../js/authFront.js"></script>
+    <script src="../js/network.js"></script>
+    <script src="../js/logout.js"></script>
+  </body>
+</html>

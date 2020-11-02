@@ -1,5 +1,3 @@
-
-
 function profilInformation() {
   fetch(url + "api/profil/" + id, {
     method: "GET",
@@ -28,13 +26,10 @@ function profilInformation() {
       let profilButton = document.getElementById("profil-button");
       let btnAdmin = document.createElement("button");
       btnAdmin.setAttribute("id", "menu-admin");
-		btnAdmin.setAttribute("class", "btn btn-secondary");
       btnAdmin.setAttribute("type", "button");
       btnAdmin.setAttribute("name", "menu-admin");
-      btnAdmin.setAttribute(
-        "onclick",
-        "window.location.href='../html/admin-liste-user.html'"
-      );
+	  btnAdmin.setAttribute("class", "btn btn-secondary");
+      btnAdmin.setAttribute("onclick", "window.location.href='../html/admin-liste-user.html'");
   
       profilButton.appendChild(btnAdmin);
       btnAdmin.textContent = "Menu Administrateur";
@@ -45,4 +40,3 @@ function profilInformation() {
 }
 
 profilInformation();
-

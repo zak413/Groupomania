@@ -44,11 +44,11 @@ function getMessageToDisplay(updateMessage) {
   btnRetourUpdate.setAttribute("type", "button");
 	btnRetourUpdate.setAttribute("class", "btn btn-secondary");
   btnRetourUpdate.setAttribute("name", "retour-update-message");
-  btnRetourUpdate.setAttribute("onclick","window.location.href='../html/intranetwork.html'");
+  btnRetourUpdate.setAttribute("onclick","window.location.href='../html/pageAccueil.html'");
 
   actionButtonUpdate.appendChild(btnRetourUpdate);
 
-  /* Contenu des balises  HTML */
+  /* Contenu des balises */
   titleUpdateMessage.value = updateMessage.title;
   textUpdateMessage.value = updateMessage.message;
   btnRetourUpdate.textContent = "Retour";
@@ -72,7 +72,7 @@ function updateMessage() {
       return response.json();
     })
     .then(
-      (window.location = "../html/intranetwork.html"),
+      (window.location = "../html/pageAccueil.html"),
       alert("Message modifié")
     )
     .catch((error) => {

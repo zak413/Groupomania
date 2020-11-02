@@ -22,7 +22,7 @@ function loginUser() {
         localStorage.setItem("token", userData.token);
 
         console.log(userData.token);
-        let appUrl = "../html/intranetwork.html?userId=" + userData.id;
+        let appUrl = "../html/pageAccueil.html?userId=" + userData.id;
         window.location = appUrl;
       }
     })
@@ -31,7 +31,6 @@ function loginUser() {
     });
 }
 
-//trigg the login function
 
 let submitLogin = document.getElementById("form_login");
 submitLogin.addEventListener("submit", ($event) => {

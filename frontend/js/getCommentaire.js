@@ -1,9 +1,3 @@
-
-
-//////// AFFICHAGE MESSAGES /////////
-
-
-
 function getAllCommentaires() {
   fetch(url + "api/commentaire", {
     method: "GET",
@@ -29,7 +23,6 @@ function getAllCommentaires() {
 
 function getCommentaires(commentaire) {
   console.log(commentaire);
-
   let listeCommentaire= document.getElementById("info_commentaire");
   let idMessage = location.search.substring(4);
   let nombreCommentaire = document.getElementById("nbr-commentaires");
@@ -38,22 +31,22 @@ function getCommentaires(commentaire) {
 
   commentaire.filter(function(commentaire) {return commentaire.message_id==idMessage}).reverse(commentaire.date_commentaire).forEach((commentaire) => {
    let commentaireContenant = document.createElement("div");
-    let infoSingleCommentaire = document.createElement("div");
-    let userSingleCommentaire = document.createElement("p");
-  let dateSingleCommentaire = document.createElement("p");
-  let texteSingleCommentaire = document.createElement("p");
+   let infoSingleCommentaire = document.createElement("div");
+   let userSingleCommentaire = document.createElement("p");
+   let dateSingleCommentaire = document.createElement("p");
+   let texteSingleCommentaire = document.createElement("p");
 
-  commentaireContenant.setAttribute("class", "commentaire");
-  infoSingleCommentaire.setAttribute("class", "info-single-commentaire");
-  userSingleCommentaire.setAttribute("class", "user-single-commentaire");
-  dateSingleCommentaire.setAttribute("class", "date-single-commentaire");
-  texteSingleCommentaire.setAttribute("class", "texte-single-commentaire");
+   commentaireContenant.setAttribute("class", "commentaire");
+   infoSingleCommentaire.setAttribute("class", "info-single-commentaire");
+   userSingleCommentaire.setAttribute("class", "user-single-commentaire");
+   dateSingleCommentaire.setAttribute("class", "date-single-commentaire");
+   texteSingleCommentaire.setAttribute("class", "texte-single-commentaire");
 
-listeCommentaire.appendChild(commentaireContenant)
-commentaireContenant.appendChild(infoSingleCommentaire);
-commentaireContenant.appendChild(texteSingleCommentaire);
-infoSingleCommentaire.appendChild(userSingleCommentaire);
-infoSingleCommentaire.appendChild(dateSingleCommentaire);
+   listeCommentaire.appendChild(commentaireContenant)
+   commentaireContenant.appendChild(infoSingleCommentaire);
+   commentaireContenant.appendChild(texteSingleCommentaire);
+   infoSingleCommentaire.appendChild(userSingleCommentaire);
+   infoSingleCommentaire.appendChild(dateSingleCommentaire);
 
   /* Contenu des balises index HTML */
   let date= new Date(commentaire.date_commentaire);
@@ -80,7 +73,7 @@ infoSingleCommentaire.appendChild(dateSingleCommentaire);
     btnDeleteCommentaire.setAttribute("id", "btn-delete-commentaire"+commentaire.id);
     btnDeleteCommentaire.setAttribute("type", "button");
     btnDeleteCommentaire.setAttribute("name", "btn-delete-commentaire");
-	  btnDeleteCommentaire.setAttribute("class", "btn btn-danger");
+	btnDeleteCommentaire.setAttribute("class", "btn btn-danger");
    
     commentaireContenant.appendChild(actionButtonCommentaire);
     actionButtonCommentaire.appendChild(btnDeleteCommentaire);
@@ -90,7 +83,7 @@ infoSingleCommentaire.appendChild(dateSingleCommentaire);
     let idCommentaire = commentaire.id;
 
 
- function deleteCommentaire() {
+  function deleteCommentaire() {
     fetch(url + "api/commentaire/" + idCommentaire, {
       method: "DELETE",
       headers: {

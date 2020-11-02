@@ -131,7 +131,7 @@ function getMessage(oneMessage) {
   btnRetourMessage.setAttribute("name", "retour-message");
   btnRetourMessage.setAttribute(
     "onclick",
-    "window.location.href='../html/intranetwork.html'"
+    "window.location.href='../html/pageAccueil.html'"
   );
 
   if (oneMessage.Message_image_url != undefined) {
@@ -168,14 +168,14 @@ function getMessage(oneMessage) {
     let modifyMessage = document.createElement("button");
     btnModifyMessage.setAttribute("id", "btn-modify-message");
     modifyMessage.setAttribute("type", "button");
-	  modifyMessage.setAttribute("class", "btn btn-secondary");
-    btnModifyMessage.setAttribute("href","form-intranetwork-update.html?id=" + oneMessage.id);
+	modifyMessage.setAttribute("class", "btn btn-secondary");
+    btnModifyMessage.setAttribute("href","updateMessage.html?id=" + oneMessage.id);
     btnModifyMessage.appendChild(modifyMessage);
     let btnDeleteMessage = document.createElement("button");
     btnDeleteMessage.setAttribute("id", "btn-delete-message");
     btnDeleteMessage.setAttribute("type", "button");
     btnDeleteMessage.setAttribute("name", "btn-delete-message");
-	  btnDeleteMessage.setAttribute("class", "btn btn-danger");
+	btnDeleteMessage.setAttribute("class", "btn btn-danger");
     actionButtonMessage.appendChild(btnModifyMessage);
     actionButtonMessage.appendChild(btnDeleteMessage);
     modifyMessage.textContent = "Modifier";
@@ -196,7 +196,7 @@ function getMessage(oneMessage) {
         return response.json();
       })
       .then(
-        (window.location = "../html/intranetwork.html"),
+        (window.location = "../html/pageAccueil.html"),
         alert("Message supprimé")
       )
       .catch((error) => {

@@ -1,5 +1,3 @@
-
-
 function createMessage() {
   let title = document.getElementById("title-message").value;
   let message = document.getElementById("new-message").value;
@@ -24,7 +22,7 @@ function createMessage() {
       return response.json();
     })
     .then(
-      (window.location = "../html/intranetwork.html"),
+      (window.location = "../html/pageAccueil.html"),
       alert("Message ajouté")
     )
     .catch((error) => {
