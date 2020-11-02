@@ -37,8 +37,11 @@ button {
   display: flex;
   justify-content: space-between;
 	align-items: center;
-	
 }
+.navbar {
+	background-color: #091f43 !important;
+}
+
 header {
 	margin-bottom: 50px;
 }
@@ -88,9 +91,10 @@ header {
   margin-bottom: 3rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: #6295F7;
+  background-color: #d1515a;
   width: 65%;
 	padding-bottom: 10px;
+	color: white;
 }
 
 #form_login button,
@@ -114,13 +118,13 @@ input {
 .profil {
   width: 90%;
   border-radius: 10px;
-  background-color: #6295F7 !important;
+  background-color: #091f43 !important;
   text-align: center;
   margin: auto;
   font-size: 1.2em;
 	box-shadow: 0 0 1em black;
 	border: 1px solid black;
-	color: black;
+	color: white;
 }
 .bolder {
 	font-weight: bold;
@@ -220,7 +224,7 @@ input {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-  background-color: #FCBC89;
+  background-color: #d1515a;/*#FCBC89;*/
   background-position: center;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -408,7 +412,7 @@ input {
   box-shadow: 0 0 1em black;
 	border-radius: 20px;
   margin-bottom: 3rem;
-  background-color: #FCBC89;
+  background-color: #d1515a;
 	padding: 20px;
 }
 
